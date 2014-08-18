@@ -13,12 +13,11 @@ use \Studievolg\View as View;
  */
 
 Router::route('', function() {
-            $controller = new \Studievolg\Controller\BaseController;
-            $controller->authenticate();
-        });
+    $controller = new \Panda\Controller\BaseController;
+});
 
 
 //Catch any other route, and forward to 404
 Router::route('(.*)', function() {
-            header("Location: /404");
-        });
+    header("Location: /404");
+});
