@@ -20,8 +20,8 @@ abstract class DB{
 		}
 		if(is_array($data)) {
     		foreach($data as $y => $x){
-    			if(property_exists($this, "_".$y)){
-                    $var = "_" . $y;
+    			if(property_exists($this, $y)){
+                    $var = $y;
     				$this->$var = $x;
                 }
     		}  
@@ -29,9 +29,9 @@ abstract class DB{
         
 	}	
 
-	public function connection()	{
+	public static function connection()	{
 
-		if(!$_conn instanceof \mysqli){
+		if(!static::$_conn instanceof \mysqli){
 			$settings 	= include(ROOT . '/database.php');
 
 			$host 		= $settings['host'];

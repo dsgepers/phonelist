@@ -9,13 +9,15 @@ namespace Panda\Model;
 class Phone extends DB{
     
     // Class variables
-    protected $_code;
-    protected $_vak;
-    protected $_periode;
-    protected $_aantalStudenten;
-    protected $_computerlokaal;
-    protected $_surveillant;
-    protected $_gebruikerID;
+    protected $id;
+    protected $internalId;
+    protected $price;
+    protected $brand;
+    protected $color;
+    protected $title;
+    protected $ean;
+
+    protected $Features;
     
     /**
      * Find the Phone by id
@@ -38,11 +40,11 @@ class Phone extends DB{
     }
     
     /**
-     * Find all the Phones
+     * Get all the Phones
      * 
      * @return Phone[]
      */
-    public static function findAll(){
+    public static function getAll(){
         $conn = static::connection();
         
         $sql = "SELECT * FROM phone";
@@ -81,5 +83,85 @@ class Phone extends DB{
         return $conn->affected_rows;
     }
 
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    public function setBrand($brand)
+    {
+        $this->brand = $brand;
+    }
+
+    public function getBrand()
+    {
+        return $this->brand;
+    }
+
+    public function setColor($color)
+    {
+        $this->color = $color;
+    }
+
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    public function setEan($ean)
+    {
+        $this->ean = $ean;
+    }
+
+    public function getEan()
+    {
+        return $this->ean;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setInternalId($internalId)
+    {
+        $this->internalId = $internalId;
+    }
+
+    public function getInternalId()
+    {
+        return $this->internalId;
+    }
+
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    public function setFeatures(array $Features)
+    {
+        $this->Features = $Features;
+    }
+
+    public function getFeatures()
+    {
+        return $this->Features;
+    }
+
+
 }
-?>

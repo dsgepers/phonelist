@@ -1,7 +1,7 @@
 <?php
 
 //Show errors!
-ini_set ('display_errors', 0);
+ini_set ('display_errors', -1);
 
 //Define root path
 define ('ROOT', dirname(__FILE__));
@@ -18,5 +18,5 @@ require(ROOT . '/vendor/autoload.php');
 include(ROOT . '/router.php');
 
 //Route the application
-\Studievolg\Router::execute();
+\Panda\Router::execute();
  

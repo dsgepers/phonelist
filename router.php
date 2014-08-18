@@ -1,6 +1,6 @@
 <?php
-use \Studievolg\Router as Router;
-use \Studievolg\View as View; 
+use \Panda\Router as Router;
+use \Panda\View as View;
 /**
  * This File contains all routes.
  * The routes first param make use of regular expression.
@@ -13,7 +13,13 @@ use \Studievolg\View as View;
  */
 
 Router::route('', function() {
-    $controller = new \Panda\Controller\BaseController;
+
+});
+
+
+Router::route('import', function() {
+    $controller = new \Panda\Controller\HomeController();
+    $controller->import();
 });
 
 

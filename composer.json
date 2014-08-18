@@ -7,7 +7,7 @@
         }
     ],
     "require": {
-
+        "halilim/xml-iterator": "dev-master"
     },
     "autoload": {
         "psr-0": {
