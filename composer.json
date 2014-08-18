@@ -1,0 +1,17 @@
+{
+    "name": "dsgepers/phonelist",
+    "authors": [
+        {
+            "name": "Dennis Schepers",
+            "email": "dennis@schepe.rs"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-0": {
+            "Panda": ""
+        }
+    }
+}
