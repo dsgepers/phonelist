@@ -1,2 +1,3 @@
 phonelist
 =========
+Attempt at reading an xml feed with a plugin...
